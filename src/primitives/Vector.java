@@ -208,4 +208,3 @@ public class Vector {
         return _head.equals(vector._head);
     }
 }
-

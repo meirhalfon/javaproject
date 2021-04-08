@@ -50,4 +50,9 @@ public class Ray {
     public int hashCode() {
         return Objects.hash(_p0, _dir);
     }
+
+    public Point3D getPoint(double t)
+    {
+        return _p0.add(_dir.scalar(t));
+    }
 }

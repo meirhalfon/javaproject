@@ -9,7 +9,7 @@ public class Cylinder extends Tube{
     final double _height;
 
     public Cylinder(Ray axisRay, double radius, double height) {
-        super(axisRay, radius);
+        super(radius, axisRay);
         _height = height;
     }
 

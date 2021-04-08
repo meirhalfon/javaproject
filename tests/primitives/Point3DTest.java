@@ -30,4 +30,12 @@ class Point3DTest {
     void distanceSquared(){
         assertEquals(0, p1.distanceSquared(p2));
     }
+
+
+    @Test
+    void subtract() {
+        Point3D p1=new Point3D(1,2,3);
+        Vector result=new Point3D(2,3,4).subtract(p1);
+        assertEquals(new Vector(1,1,1),result,"error: Point-point does not work correctly");
+    }
 }

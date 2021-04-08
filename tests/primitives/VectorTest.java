@@ -64,7 +64,7 @@ class VectorTest {
             fail("crossProduct() for parallel vectors does not throw an exception");
         } catch (Exception e) {}
 
-}
+    }
 
     @Test
     void add() {

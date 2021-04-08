@@ -2,24 +2,22 @@ package geometries;
 
 import primitives.*;
 
+import java.util.List;
 import java.util.Objects;
 
-public class Tube implements Geometry{
-    Ray _axisRay;
-    double _radius;
+public class Tube extends RadialGeometry implements Geometry{
+    final    Ray _axisRay;
 
-    public Tube(Ray axisRay, double radius) {
+    public Tube( double radius,Ray axisRay) {
+        super(radius);
         this._axisRay = axisRay;
-        this._radius = radius;
     }
 
     public Ray getAxisRay() {
         return _axisRay;
     }
 
-    public double getRadius() {
-        return _radius;
-    }
+
 
     @Override
     public Vector getNormal(Point3D p)
@@ -53,5 +51,10 @@ public class Tube implements Geometry{
                 "_axisRay=" + _axisRay +
                 ", _radius=" + _radius +
                 '}';
+    }
+
+    @Override
+    public List<Point3D> findIntersections(Ray ray) {
+        return null;
     }
 }

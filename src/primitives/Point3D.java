@@ -34,8 +34,9 @@ public class Point3D {
      * @return
      */
 
-    public Coordinate getX() {
-        return _x;
+    public double getX()
+    {
+        return _x.coord;
     }
 
     /**
@@ -43,8 +44,9 @@ public class Point3D {
      * @return
      */
 
-    public Coordinate getY() {
-        return _y;
+    public double getY()
+    {
+        return _y.coord;
     }
 
     /**
@@ -52,8 +54,9 @@ public class Point3D {
      * @return
      */
 
-    public Coordinate getZ() {
-        return _z;
+    public double getZ()
+    {
+        return _z.coord;
     }
 
     public boolean equals(Point3D object) {
