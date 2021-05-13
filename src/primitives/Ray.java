@@ -1,6 +1,9 @@
 package primitives;
 
+import java.util.List;
 import java.util.Objects;
+
+import static java.lang.Double.MAX_VALUE;
 
 public class Ray {
     final Point3D _p0;
@@ -28,6 +31,23 @@ public class Ray {
 
     public Vector getVec() {
         return _dir;
+    }
+
+    public Point3D getClosestPoint(List<Point3D> intersections){
+        Point3D result = null;
+        if (intersections == null){
+            return null;
+        }
+
+        double distance = Double.MAX_VALUE;
+        for (Point3D p : intersections){
+            double newDist = _p0.distance(p);
+            if (newDist < distance){
+                distance = newDist;
+                result = p;
+            }
+        }
+        return result;
     }
 
     @Override

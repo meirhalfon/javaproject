@@ -133,6 +133,4 @@ public class Point3D {
                 _z.coord + vector._head._z.coord
         );
     }
-
-
 }

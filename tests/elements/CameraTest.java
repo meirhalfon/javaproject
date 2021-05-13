@@ -4,6 +4,7 @@ import org.junit.Test;
 import primitives.Point3D;
 import primitives.Ray;
 import primitives.Vector;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class CameraTest {
@@ -52,7 +53,5 @@ class CameraTest {
                 camera.setViewPlaneSize(6, 6).constructRayThroughPixel(3, 3, 0, 1), "Bad ray");
 
     }
-
-
 
 }

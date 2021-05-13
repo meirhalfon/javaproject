@@ -22,23 +22,21 @@ class VectorTest {
         }
 
     }
+
+
     @Test
     void dotProduct() {
         Vector v3 = new Vector(0, 3, -2);
-        if (!isZero(v1.dotProduct(v3)))
-            fail("ERROR: dotProduct() for orthogonal vectors is not zero");
-        if (!isZero(v1.dotProduct(v2) + 28))
-            fail("ERROR: dotProduct() wrong value");
-    }
-
-    @Test
-    void dotProduct2() {
-        Vector v3 = new Vector(0, 3, -2);
         double v1DotV3= alignZero(v1.dotProduct(v3));
+        //TC01: Two orthogonal vector
         assertEquals(0,v1DotV3,"ERROR: dotProduct() for orthogonal vectors is not zero");
+        //TC02:Two vector not orthogonal
+        v3=new Vector(0,2,-2);
+        if(isZero(v1.dotProduct(v3)))
+        {
+            fail("ERROR:Must be different from 0 because v1 not orthogonal to v3");
+        }
 
-        if (!isZero(v1.dotProduct(v2) + 28))
-            fail("ERROR: dotProduct() wrong value");
     }
 
     @Test
